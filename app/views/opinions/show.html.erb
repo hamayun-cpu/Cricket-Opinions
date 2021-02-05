@@ -9,6 +9,13 @@
   <strong>Thought:</strong>
   <%= @opinion.thought %>
 </p>
+
+<p>
+  <strong>Created At:</strong>
+  <%= @opinion.created_at %> 
+</p>
+
+
 <% if current_user.id == @opinion.user.id %>
 <%= link_to 'Edit', edit_opinion_path(@opinion) %>
 <%end%>

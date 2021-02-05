@@ -1,10 +1,12 @@
-<ul>
-    <li><%= @user.username %></li>
+<div>
+    <h1> 
+        UserName: <span> <%= @user.username %>  </span>
+    </h1>
+    <h2>All posts</h2>
     <ul>
-        <br>
-        
         <% @user.opinions.all.each do |opinion| %>
-        <li><%= opinion.thought %></li>
+        <li><%= opinion.thought  %><small> <%= opinion.created_at %> </small></li>
         <% end %>
     </ul>
-</ul>
+ 
+</div>
