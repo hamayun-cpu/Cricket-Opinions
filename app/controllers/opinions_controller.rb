@@ -22,7 +22,7 @@ class OpinionsController < ApplicationController
 
   # POST /opinions or /opinions.json
   def create
-    @opinion = Opinion.new(opinion_params)
+    @opinion = current_user.opinions.build(opinion_params)
 
     respond_to do |format|
       if @opinion.save

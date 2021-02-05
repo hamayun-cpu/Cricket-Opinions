@@ -2,13 +2,14 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @opinion.author_id %>
+  <%= @opinion.user.username %>
 </p>
 
 <p>
   <strong>Thought:</strong>
   <%= @opinion.thought %>
 </p>
-
-<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+<% if current_user.id == @opinion.user.id %>
+<%= link_to 'Edit', edit_opinion_path(@opinion) %>
+<%end%>
 <%= link_to 'Back', opinions_path %>

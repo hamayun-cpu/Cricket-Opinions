@@ -1,0 +1,10 @@
+<ul>
+    <li><%= @user.username %></li>
+    <ul>
+        <br>
+        
+        <% @user.opinions.all.each do |opinion| %>
+        <li><%= opinion.thought %></li>
+        <% end %>
+    </ul>
+</ul>
