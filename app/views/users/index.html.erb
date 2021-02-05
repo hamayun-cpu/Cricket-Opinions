@@ -1,7 +1,6 @@
 <ul>
   <% @users.each do |user| %>
-    <%= link_to user.username , user_path(user)%>
-    <br>
-
-  <% end %>
+    <li><%= link_to user.username , user_path(user) %></li>
+      <%= follow_check(user) %>
+  <% end %> 
 </ul>
