@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :email, uniqueness: true
   has_many :opinions
+  has_many :recieved_follows, foreign_key: :followed_id, class_name: 'follow'
+  has_many :followers, through: :recieved_follows, source: :follower
+
+  has_many :given_follows, foreign_key: :follower_id, class_name: 'follow'
+  has_many :followings, through: :given_follows, source: :followed
 end
