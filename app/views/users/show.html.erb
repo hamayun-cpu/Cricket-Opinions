@@ -2,7 +2,8 @@
     <h1> 
         UserName: <span> <%= @user.username %>  </span>
     </h1>
-    <%= follow_check(@user) %>
+    <button type="button" class="btn btn-primary"> <%= follow_check(@user) %> </button>
+    
     <h2>Followers : <%= @user.followers.count %></h2>
     <h2>Followings : <%= @user.followings.count %></h2>
     <h2>All posts</h2>
