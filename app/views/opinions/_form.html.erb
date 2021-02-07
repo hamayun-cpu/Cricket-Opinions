@@ -1,4 +1,6 @@
-<%= form_with(model: opinion, local: true) do |form| %>
+<%
+=begin%>
+ <%= form_with(model: opinion, local: true) do |form| %>
   <% if opinion.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(opinion.errors.count, "error") %> prohibited this opinion from being saved:</h2>
@@ -18,5 +20,18 @@
 
   <div class="actions">
     <%= form.submit %>
+  </div>
+<% end %> 
+<%
+=end%>
+
+<%= form_with(model: @opinion, local: true) do |form| %>
+  <div class="p-3 mr-3 trix">
+    <div class="">
+      <%= form.rich_text_area :body, label: "What's Your Opinion", input_html: {class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholders: "Your opinion...", autofocus: true %>
+    </div>
+
+  <%= hidden_field_tag(:redirect_url, opinions_path) %>
+  <%= form.button :submit, class: "btn btn-secondary mt-2" %>
   </div>
 <% end %>

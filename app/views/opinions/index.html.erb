@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<%
+=begin%>
+ <p id="notice"><%= notice %></p>
 
 <h1>Opinions</h1>
 
@@ -28,4 +30,59 @@
 
 <br>
 
-<%= link_to 'New Opinion', new_opinion_path %>
+<%= link_to 'New Opinion', new_opinion_path %> 
+<%
+=end%>
+
+
+
+<div class="container-fluid ">
+  <div class="row">
+
+    <div class="col-3 p-0 content">
+      <nav class="p-0">
+        <div id="cart" class="carts">
+          <%= render "users/profile" %>
+        </div>
+        <ul class="text-light">
+          <li><a href="/"><i class="fa fa-home text-light" aria-hidden="true"></i><%= link_to 'Home', opinions_path %></a></li>
+          <hr>
+          <li><i class="fa fa-user text-light" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user.id), remote:true %></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="col-9 flex-nowrap p-0">
+      <%= render "opinions/navbar" %>
+      <div class="row  ml-0">
+        <div class="col-8 m-0 pr-0 pl-0">
+          <div>
+            <%= render "opinions/tab_nav" %>
+          </div>
+        </div>
+        <div class="col-4 pl-0 who-to-follow ">
+          <div class="text-muted pt-2 ">
+            <h6 class="text-center">Who To Follow</h6>
+            <hr>
+            <div >
+              <% User.order("created_at DESC").first(3).each do |p| %>
+                <div class="col-12 ">
+                  <%= image_tag("profile.png", class: 'rounded-circle', height: 70, width: 70) %>
+                  <%=link_to p.fullname, user_path(id: p.id) %>
+                  <hr>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div id="user" class="users">
+            <%  @user %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
