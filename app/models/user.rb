@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :email, uniqueness: true
 
-  has_many :opinions
+  has_many :opinions, dependent: :delete_all
 
   has_many :follows
 

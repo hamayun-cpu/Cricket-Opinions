@@ -5,27 +5,20 @@ html {
 	height: 100%;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	font-family: Hind Siliguri,Arial,Helvetica Neue,Helvetica,sans-serif;
-    font-weight: 400;
-}
-
 * {
 	-webkit-font-smoothing: antialiased;
 	box-sizing: border-box;
     color: #000;
 }
 
-a {
-	color: #337ab7;
+.blue-text {
+    color: #337ab7;
 }
 
 .form-container {
 	background: #ffffff;
 	position: absolute;
-	top: 20%;
+	top: 12%;
 	left: 6%;
 	max-width: 50rem;
 	width: 100%;
@@ -44,7 +37,7 @@ a {
 	font-size: 1.4rem;
 }
 
-label {
+.label-class {
 	color: #087ac0;
     display: block;
     max-width: 100%;
@@ -53,7 +46,7 @@ label {
     font-size: 14px;
 }
 
-input {
+.input-class {
 	width: 100%;
     padding: 0.8rem;
     height: 3.4rem;
@@ -61,44 +54,3 @@ input {
     border-radius: 2px;
     border: unset;
 }
-
-.signin-password span {
-	float: right;
-    font-size: 1.1rem;
-    color: #979797;
-    padding-top: 4px;
-}
-
-a.pass-forgot-tag {
-    display: block;
-    text-align: end;
-    padding-top: 1em;
-    font-size: 1.2rem;
-    text-decoration: underline;
-}
-
-.btn-block {
-	display: block;
-    width: 100%;
-    padding: 1.6rem 1rem;
-    margin-top: 2rem;
-    color: #fff;
-    background: #087ac0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
