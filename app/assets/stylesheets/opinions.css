@@ -42,6 +42,10 @@
   box-shadow: 0 0 10px 0 rgba(57, 68, 84, 0.2);
 }
 
+.mt-hr {
+  margin-top: 14px;
+}
+
 #user {
   z-index: 100;
   position: absolute;

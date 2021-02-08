@@ -41,3 +41,10 @@
     border-radius: 2px;
     border: unset;
 }
+
+.none-resize {
+    resize: none;
+    padding: 0.5rem;
+    height: 3rem;
+    background: inherit;
+}
