@@ -2,7 +2,7 @@
   <% @opinions.order("created_at DESC").each do | opinion | %>
   <div  class="list-group-item list-group-item-action my-1 rounded ">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1 text-capitalize"><%= link_to  opinion.user.username, user_path(opinion.user.id), remote: true, :class => 'text-decoration-none text-black font-weight-bold'%></h5>
+      <h5 class="mb-1 text-capitalize"><%= link_to  opinion.user.username, user_path(opinion.user.id), :class => 'text-decoration-none text-black font-weight-bold'%></h5>
       <hr>
       <small class = 'text-secondary'><%= opinion.created_at.strftime('%c') %></small>
     </div>
