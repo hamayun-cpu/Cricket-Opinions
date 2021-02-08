@@ -1,16 +1,30 @@
-<div>
-    <h1> 
-        UserName: <span> <%= @user.username %>  </span>
-    </h1>
-    <button type="button" class="btn btn-primary"> <%= follow_check(@user) %> </button>
-    
-    <h2>Followers : <%= @user.followers.count %></h2>
-    <h2>Followings : <%= @user.followings.count %></h2>
-    <h2>All posts</h2>
-    <ul>
-        <% @user.opinions.all.each do |opinion| %>
-        <li><%= opinion.thought  %><small> <%= opinion.created_at %> </small></li>
-        <% end %>
-    </ul>
- 
+<div class="container row col-12 p-0 m-0">
+  <div class="content col-3 p-0 m-0">
+    <nav class="side_nav" style="width: 100%">
+      <ul>
+         <ul class="text-light">
+          <li><a href="/"><i class="fa fa-home text-light" aria-hidden="true"></i><%= link_to 'Home', opinions_path %></a></li>
+          <hr>
+          <li><i class="fa fa-user text-light" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user)%></li>
+        </ul>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-9 p-0 grey-background">
+    <%= render 'opinions/navbar' %>
+    <div class="col-12 row m-0 p-0">
+      <div class="col-8 p-0">
+        <%
+=begin%>
+ <%= user_cover %> 
+<%
+=end%>
+        <%= render 'user_tab_nav' %>
+      </div>
+      <div class="col-4 pl-0">
+        <%= render 'full_profile' %>
+      </div>
+    </div>
+  </div>
 </div>
+

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @new_opinion = Opinion.new
     @user = User.find(params[:id])
   end
 end

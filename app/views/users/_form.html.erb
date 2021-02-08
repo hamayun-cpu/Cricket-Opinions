@@ -1,13 +1,12 @@
 <div class = 'white-back mx-2 p-4 mt-4 rounded'>
-  <%= form_with(model: @opinion, local: true) do |form| %>
+  <%= form_with(model: @new_opinion, local: true) do |form| %>
  
      
        <h6 class = 'text-secondary my-2'>SHARE YOUR OPINION</h6>
         <%= form.text_area :thought, placeholder: "Compose new Opinion", class: 'input-class none-resize mt-2 w-100 border rounded' %> <br>
      
+     <%= hidden_field_tag(:redirect_url, user_path(@user)) %>
       <%= form.submit class: 'btn btn-primary' %>
-      <%= hidden_field_tag(:redirect_url, opinions_path) %>
+   
   <% end %>
 </div>
-
- 

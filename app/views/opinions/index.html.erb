@@ -9,7 +9,7 @@
         <ul class="text-light">
           <li><a href="/"><i class="fa fa-home text-light" aria-hidden="true"></i><%= link_to 'Home', opinions_path %></a></li>
           <hr>
-          <li><i class="fa fa-user text-light" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user.id), remote:true %></li>
+          <li><i class="fa fa-user text-light" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user)%></li>
         </ul>
       </nav>
     </div>
@@ -31,7 +31,7 @@
               <% User.order("created_at DESC").first(3).each do |p| %>
                 <div class="col-12 ">
                   <%= image_tag("profile.png", class: 'rounded-circle', height: 70, width: 70) %>
-                  <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black' %>
+                  <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
                   <hr>
                 </div>
               <% end %>
