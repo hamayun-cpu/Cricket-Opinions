@@ -1,14 +1,14 @@
 <div class="container pt-3 pr-0">
-  <div class="col-12 row align-items-baseline justify-content-center ">
-    <div class="col-4 avatar">
-      <%
-=begin%>
- <%= current_avatar %> 
-<%
-=end%>
+  <div class="col-12 row justify-content-center align-items-center pl-0">
+    <div class="col-4 align-self-center">
+      <% if current_user.main_image.attached? %> 
+        <%= image_tag current_user.main_image, class: 'profile-pic rounded' %>
+      <%else%>
+        <%= image_tag("profile.png", class: 'profile-pic rounded') %>
+      <%end%>
     </div>
-    <div class=" justify-content-center col-8 " style=" text-align: center">
-      <h5 class="card-title text-light text-capitalize"><%= current_user.fullname %></h5>
+    <div class="col-8 px-0">
+      <h5 class="text-light text-capitalize text-left"><%= current_user.fullname %></h5>
     </div>
   </div>
   <hr>

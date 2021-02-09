@@ -1,19 +1,17 @@
-<div class="container pt-5  who-to-follow">
+<div class="container pt-2 who-to-follow">
   <div class="col-12 align-content-center pt-4">
 
     <div style="text-align: center" >
-      <%
-=begin%>
- <div class="p-1 ">
-        <%= avatar %> 
-      </div> 
-<%
-=end%>
+      <% if @user.main_image.attached? %> 
+        <%= image_tag current_user.main_image, class: 'bigger-profile-pic rounded-circle' %>
+      <%else%>
+        <%= image_tag("profile.png", class: 'rounded-circle', height: 72, width: 72) %>
+      <%end%>
     </div>
 
 
     <div class=" justify-content-center " style=" text-align: center">
-      <h5 class="card-title text-capitalize"><%= @user.fullname %></h5>
+      <h5 class="card-title text-capitalize mt-3 mb-0"><%= @user.fullname %></h5>
       <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
     </div>
     <ul class="dropdown col-12 " style="text-align: center">

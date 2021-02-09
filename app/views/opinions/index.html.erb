@@ -30,7 +30,11 @@
             <div >
               <% User.order("created_at DESC").first(3).each do |p| %>
                 <div class="col-12 ">
-                  <%= image_tag("profile.png", class: 'rounded-circle', height: 70, width: 70) %>
+                  <% if p.main_image.attached? %> 
+                    <%= image_tag p.main_image, class: 'profile-pic rounded-circle' %>
+                  <%else%>
+                     <%= image_tag("profile.png", class: 'rounded-circle', height: 70, width: 70) %>
+                  <%end%>
                   <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
                   <hr>
                 </div>

@@ -22,7 +22,13 @@
     <%= f.label :password_confirmation, :class => 'label-class mt-4 blue-text' %>
     <%= f.password_field :password_confirmation, :class => 'input-class' %>
 
-  	<div class = 'mt-1 mb-2'>
+    <%= f.label :main_image, "Profile Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :main_image %>
+
+    <%= f.label :cover_image, "Cover Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :cover_image %>
+
+  	<div class = 'mt-3 mb-2'>
     	<%= f.submit "Sign up", :class => 'btn btn-primary w-100' %>
   	</div>
 	<% end %>
