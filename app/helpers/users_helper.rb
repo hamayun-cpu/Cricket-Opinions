@@ -10,4 +10,10 @@ module UsersHelper
       end
     end
   end
+
+  def follower(user)
+    followers_array = user.followers
+    followers_array = followers_array.all.pluck(:id)
+    followers_array.include?(current_user.id)
+  end
 end
