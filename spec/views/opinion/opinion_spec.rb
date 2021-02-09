@@ -1,7 +1,6 @@
-# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
-RSpec.describe 'Test to verify if the users opinions' do
+RSpec.describe 'Test to verify if the users opinions' do  # rubocop:disable Metrics/BlockLength
   before :each do
     @user1 = User.create(fullname: 'test1', username: 't1', email: 'test1@test.com', password: '123456', id: 1)
     @user2 = User.create(fullname: 'test2', username: 't2', email: 'test2@test.com', password: '123456', id: 2)
@@ -32,4 +31,3 @@ RSpec.describe 'Test to verify if the users opinions' do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

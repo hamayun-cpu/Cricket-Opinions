@@ -7,7 +7,7 @@ class OpinionsTest < ApplicationSystemTestCase
 
   test 'visiting the index' do
     visit opinions_url
-    assert_selector "h1", text: "Opinions"
+    assert_selector 'h1', text: 'Opinions'
   end
 
   test 'creating a Opinion' do

@@ -1,4 +1,3 @@
-# rubocop:disable Style/SoleNestedConditional
 module UsersHelper
   def follow_check(user)
     if current_user != user
@@ -21,12 +20,10 @@ module UsersHelper
   def users_which_are_not_followed
     u = []
     User.order('created_at DESC').each do |us|
-      unless current_user == us
-        u << us unless follower(us)
+      if current_user != us
+        u << us unless follower(us) # rubocop:disable Style/SoleNestedConditional
       end
     end
     u[0..2]
   end
 end
-
-# rubocop:enable Style/SoleNestedConditional
