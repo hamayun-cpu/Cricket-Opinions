@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   has_many :opinions, dependent: :delete_all
 
-  has_many :follows, dependent: :delete_all
+  has_many :follows
 
   has_many :recieved_follows, foreign_key: :followed_id, class_name: 'Follow'
   has_many :followers, through: :recieved_follows, source: :follower, dependent: :delete_all
