@@ -11,13 +11,13 @@ class User < ApplicationRecord
 
   has_many :opinions, dependent: :delete_all
 
-  has_many :follows
+  has_many :follows, dependent: :delete_all
 
   has_many :recieved_follows, foreign_key: :followed_id, class_name: 'Follow'
-  has_many :followers, through: :recieved_follows, source: :follower
+  has_many :followers, through: :recieved_follows, source: :follower, dependent: :delete_all
 
   has_many :given_follows, foreign_key: :follower_id, class_name: 'Follow'
-  has_many :followings, through: :given_follows, source: :followed
+  has_many :followings, through: :given_follows, source: :followed, dependent: :delete_all
 
   has_one_attached :main_image
 
