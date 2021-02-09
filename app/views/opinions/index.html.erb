@@ -28,7 +28,9 @@
             <h6 class="text-start text-secondary">WHO TO FOLLOW</h6>
             <hr class = "mt-hr">
             <div >
-              <% User.order("created_at DESC").first(3).each do |p| %>
+              
+              <% users_which_are_not_followed.each do |p| %>
+                <%if p %>
                 <div class="col-12 ">
                   <% if p.main_image.attached? %> 
                     <%= image_tag p.main_image, class: 'profile-pic rounded-circle' %>
@@ -38,6 +40,7 @@
                   <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
                   <hr>
                 </div>
+                <% end %>
               <% end %>
             </div>
           </div>

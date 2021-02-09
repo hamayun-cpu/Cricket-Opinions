@@ -16,4 +16,14 @@ module UsersHelper
     followers_array = followers_array.all.pluck(:id)
     followers_array.include?(current_user.id)
   end
+
+  def users_which_are_not_followed
+    u = []
+    User.order('created_at DESC').each do |us|
+      unless current_user == us
+        u << us unless follower(us)
+      end
+    end
+    u[0..2]
+  end
 end
