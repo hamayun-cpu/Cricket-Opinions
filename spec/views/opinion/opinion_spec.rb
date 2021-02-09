@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 require 'rails_helper'
 
 RSpec.describe 'Test to verify if the users opinions' do
@@ -31,3 +32,4 @@ RSpec.describe 'Test to verify if the users opinions' do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

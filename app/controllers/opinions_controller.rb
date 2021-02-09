@@ -9,8 +9,7 @@ class OpinionsController < ApplicationController
   end
 
   # GET /opinions/1 or /opinions/1.json
-  def show
-  end
+  def show; end
 
   # GET /opinions/new
   def new
@@ -18,8 +17,7 @@ class OpinionsController < ApplicationController
   end
 
   # GET /opinions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /opinions or /opinions.json
   def create
@@ -53,7 +51,7 @@ class OpinionsController < ApplicationController
   def destroy
     @opinion.destroy
     respond_to do |format|
-      format.html { redirect_to opinions_url, notice: "Opinion was successfully destroyed." }
+      format.html { redirect_to opinions_url, notice: 'Opinion was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

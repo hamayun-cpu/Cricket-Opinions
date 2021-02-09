@@ -1,3 +1,4 @@
+# rubocop:disable Style/SoleNestedConditional
 module UsersHelper
   def follow_check(user)
     if current_user != user
@@ -27,3 +28,5 @@ module UsersHelper
     u[0..2]
   end
 end
+
+# rubocop:enable Style/SoleNestedConditional
