@@ -5,7 +5,7 @@
 .form-container {
 	background: #ffffff;
 	position: absolute;
-	top: 12%;
+	top: 7%;
 	left: 6%;
 	max-width: 50rem;
 	width: 100%;
@@ -36,7 +36,7 @@
 .input-class {
 	width: 100%;
     padding: 0.8rem;
-    height: 3.4rem;
+    height: 2rem;
     background: #f3f3f3;
     border-radius: 2px;
     border: unset;

@@ -3,7 +3,7 @@
 
     <div style="text-align: center" >
       <% if @user.main_image.attached? %> 
-        <%= image_tag current_user.main_image, class: 'bigger-profile-pic rounded-circle' %>
+        <%= image_tag @user.main_image, class: 'bigger-profile-pic rounded-circle' %>
       <%else%>
         <%= image_tag("profile.png", class: 'rounded-circle', height: 72, width: 72) %>
       <%end%>
