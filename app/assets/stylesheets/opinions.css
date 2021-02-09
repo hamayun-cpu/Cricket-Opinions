@@ -1,10 +1,7 @@
 .content {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  display: -webkit-flex;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-orient: vertical;
