@@ -22,4 +22,6 @@ class User < ApplicationRecord
   has_one_attached :main_image
 
   has_one_attached :cover_image
+
+  validate :acceptable_main_image
 end
