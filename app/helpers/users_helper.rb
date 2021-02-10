@@ -32,4 +32,8 @@ module UsersHelper
       image_tag('profile.png', class: 'profile-pic rounded')
     end
   end
+
+  def cover_pic
+    image_tag @user.cover_image, class: 'w-100 h-300' if @user.cover_image.attached?
+  end
 end

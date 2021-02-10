@@ -14,11 +14,7 @@
     <%= render 'opinions/navbar' %>
     <div class="col-12 row m-0 p-0">
       <div class="col-8 p-0 border-right">
-      <% if @user.cover_image.attached? %> 
-       <div class = "w-100 h-300">
-          <%= image_tag @user.cover_image, class: 'w-100 h-100' %>
-       </div>
-        <%end%>
+        <%= cover_pic %>
         <%= render 'user_tab_nav' %>
       </div>
       <div class="col-4 pl-0">

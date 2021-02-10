@@ -3,12 +3,7 @@
   <%if follower(opinion.user) || opinion.user == current_user %>
     <div class="list-group-item list-group-item-action my-1 rounded">
       <div class = 'd-flex'>
-        <% if opinion.user.main_image.attached? %> 
-          <%= image_tag opinion.user.main_image, class: 'profile-pic rounded' %>
-        <%else%>
-          <%= image_tag("profile.png", class: 'profile-pic rounded') %>
-        <%end%>
-
+        <%= card_profile_pic_rounded(opinion.user) %>
         <div class = 'pl-2 w-100'>
           <div class="d-flex w-100">
             <h5 class="mb-1 text-capitalize"><%= link_to  opinion.user.username, user_path(opinion.user.id), :class => 'text-decoration-none text-black font-weight-bold'%></h5>

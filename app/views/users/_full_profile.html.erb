@@ -2,11 +2,7 @@
   <div class="col-12 align-content-center pt-4">
 
     <div style="text-align: center" >
-      <% if @user.main_image.attached? %> 
-        <%= image_tag @user.main_image, class: 'bigger-profile-pic rounded-circle' %>
-      <%else%>
-        <%= image_tag("profile.png", class: 'rounded-circle', height: 72, width: 72) %>
-      <%end%>
+      <%= big_profile_pic_rounded(@user) %>
     </div>
 
 
