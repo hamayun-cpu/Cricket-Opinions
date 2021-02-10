@@ -24,4 +24,12 @@ module UsersHelper
     end
     u[0..2]
   end
+
+  def profile_pic
+    if current_user.main_image.attached?
+      image_tag current_user.main_image, class: 'profile-pic rounded'
+    else
+      image_tag('profile.png', class: 'profile-pic rounded')
+    end
+  end
 end
