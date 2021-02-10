@@ -17,7 +17,7 @@ module OpinionsHelper
 
   def card_profile_pic_rounded(user)
     if user.main_image.attached?
-      image_tag opinion.user.main_image, class: 'profile-pic rounded'
+      image_tag user.main_image, class: 'profile-pic rounded'
     else
       image_tag('profile.png', class: 'profile-pic rounded')
     end
