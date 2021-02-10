@@ -10,12 +10,16 @@
 ## Concept
 >  As Wikipedia defines it: A Social networking sites allow users to share ideas, digital photos and videos, posts, and to inform others about online or real-world activities and events with people in their network. Depending on the social media platform, members may be able to contact any other member. In other cases, members can contact anyone they have a connection to, and subsequently anyone that contact has a connection to, and so on. The success of social networking services can be seen in their dominance in society today, with Facebook having a massive 2.13 billion active monthly users and an average of 1.4 billion daily active users in 2017.[5] LinkedIn, a career-oriented social-networking service, generally requires that a member personally know another member in real life before they contact them online. Some services require members to have a preexisting connection to contact other members.
 
-
 ## Usage
 
 - This project intends to practice my skills building a fully working MVP;
 - Prepare data architecture documentation;
 - Work with deployment to Heroku.<br>
+
+
+## Live Demo Link
+
+[Project live website](https://fierce-wildwood-74025.herokuapp.com)
 
 
 ## Video Demo
