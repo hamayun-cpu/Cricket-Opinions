@@ -2,24 +2,19 @@ class OpinionsController < ApplicationController
   before_action :set_opinion, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
-  # GET /opinions or /opinions.json
   def index
     @opinion = Opinion.new
     @opinions = Opinion.all
   end
 
-  # GET /opinions/1 or /opinions/1.json
   def show; end
 
-  # GET /opinions/new
   def new
     @opinion = Opinion.new
   end
 
-  # GET /opinions/1/edit
   def edit; end
 
-  # POST /opinions or /opinions.json
   def create
     @opinion = current_user.opinions.build(opinion_params)
 
@@ -34,7 +29,6 @@ class OpinionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /opinions/1 or /opinions/1.json
   def update
     respond_to do |format|
       if @opinion.update(opinion_params)
@@ -47,7 +41,6 @@ class OpinionsController < ApplicationController
     end
   end
 
-  # DELETE /opinions/1 or /opinions/1.json
   def destroy
     @opinion.destroy
     respond_to do |format|
@@ -58,12 +51,10 @@ class OpinionsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_opinion
     @opinion = Opinion.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def opinion_params
     params.require(:opinion).permit(:user_id, :thought)
   end
