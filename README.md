@@ -61,7 +61,7 @@ https://www.loom.com/share/57b5aebaa79c49b18194f3c4be32bce5
 ### 📝 What you will find:
    1. The user logs in to the app.
    <br>
-   ![Alt text](https://github.com/hamayun-cpu/Cricket-Opinions/edit/project-setup/images/screenshot.PNG?raw=true "Screenshot")
+   ![Alt text](https://github.com/hamayun-cpu/Cricket-Opinions/blob/project-setup/app/assets/images/SS.png)
    
    2. The user is presented with the homepage that includes:
        1. Left-side menu.
