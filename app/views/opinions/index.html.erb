@@ -31,15 +31,9 @@
               <div class="col-12 ">
                 <% if users_which_are_not_followed.any? %>
                   <% users_which_are_not_followed.each do |p| %>
-                    <%if p %>
-                      <% if p.main_image.attached? %> 
-                        <%= image_tag p.main_image, class: 'profile-pic rounded-circle' %>
-                      <%else%>
-                        <%= image_tag("profile.png", class: 'rounded-circle', height: 70, width: 70) %>
-                      <%end%>
-                      <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
-                      <hr>
-                    <% end %>
+                    <%= profile_pic_rounded(p) %>
+                    <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
+                    <hr>
                   <% end %>
                 <% else %>
                   <h5 class = "mt-5 text-secondary">Looks like there is no one to Follow</h5>
@@ -57,4 +51,3 @@
     
   </div>
 </div>
-
