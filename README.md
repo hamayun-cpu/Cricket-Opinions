@@ -24,7 +24,7 @@
 
 ## Video Demo
 
-https://www.loom.com/share/57b5aebaa79c49b18194f3c4be32bce5
+https://www.youtube.com/watch?v=cxpvy7x_BR0
    
   
 ## 🛠 Getting Started
