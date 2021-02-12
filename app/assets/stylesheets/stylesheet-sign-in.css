@@ -1,0 +1,50 @@
+.blue-text {
+  color: #337ab7;
+}
+
+.form-container {
+  background: #fff;
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  max-width: 50rem;
+  width: 100%;
+  padding: 5rem 3rem;
+  border-radius: 4%;
+  opacity: 0.91;
+}
+
+.signup {
+  margin-bottom: 2.3rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.signup span {
+  font-size: 1.4rem;
+}
+
+.label-class {
+  color: #087ac0;
+  display: block;
+  max-width: 100%;
+  font-weight: 400;
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+
+.input-class {
+  width: 100%;
+  padding: 0.8rem;
+  height: 2rem;
+  background: #f3f3f3;
+  border-radius: 2px;
+  border: unset;
+}
+
+.none-resize {
+  resize: none;
+  padding: 0.5rem;
+  height: 3rem;
+  background: inherit;
+}

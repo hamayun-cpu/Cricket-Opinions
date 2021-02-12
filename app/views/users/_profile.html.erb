@@ -1,0 +1,23 @@
+<div class="container pt-3 pr-0">
+  <div class="col-12 row justify-content-center align-items-center pl-0">
+    <div class="col-4 align-self-center">
+      <%= profile_pic %>
+    </div>
+    <div class="col-8 px-0">
+      <h5 class="text-light text-capitalize text-left"><%= current_user.fullname %></h5>
+    </div>
+  </div>
+  <hr>
+  <div class = "col-12 row mt-5">
+    <div class = "col-6 text-secondary">
+      <%= current_user.followings.count %>
+      <p class = "text-secondary">Following</p>
+    </div>
+    <div class="col-6 text-secondary">
+      <%= current_user.followers.count %>
+      <p class = "text-secondary">Followers</p>
+    </div>
+
+  </div>
+</div>
+<hr>

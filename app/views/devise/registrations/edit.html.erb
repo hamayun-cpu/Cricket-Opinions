@@ -1,0 +1,47 @@
+<div class="back_image">
+<div class="form-container py-3">
+<p class="signup">Edit <%= resource_name.to_s.humanize %></p>
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'signin-email', :method => :put} ) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <%= f.label :email, :class => 'label-class blue-text' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'input-class' %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+  
+    <%= f.label :password, :class => 'label-class mt-4 blue-text' %>
+    <% if @minimum_password_length %>
+     
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+    <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "new-password", :class => 'input-class' %>
+    
+
+    <%= f.label :password_confirmation, :class => 'label-class mt-4 blue-text' %>
+    <%= f.password_field :password_confirmation, :class => 'input-class' %>
+
+    <%= f.label :current_password, :class => 'label-class mt-4 blue-text' %>
+    <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", :class => 'input-class' %>
+
+    <%= f.label :main_image, "Profile Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :main_image %>
+
+    <%= f.label :cover_image, "Cover Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :cover_image %>
+ 
+  	<div class = 'mt-1 mb-2'>
+    	<%= f.submit "Update", :class => 'btn btn-primary w-100 my-2' %>
+  	</div>
+	<% end %>
+
+  <h3>Cancel my account  <small> Unhappy?  </small> </h3>
+
+  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-danger w-25' %>
+
+<%= link_to "Back", :back %>
+</div>
+</div>
