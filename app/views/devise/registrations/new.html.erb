@@ -1,0 +1,36 @@
+<div class="back_image">
+<div class="form-container py-4">
+<p class="signup">Sign Up <span>or <%= link_to 'Sign In', new_user_session_path  %></span></p>
+	<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'signin-email'} ) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <%= f.label :fullname, :class => 'label-class blue-text' %>
+    <%= f.text_field :fullname, :class => 'input-class' %>
+
+  	<%= f.label :username, :class => 'label-class mt-4 blue-text' %>
+   	<%= f.text_field :username, :class => 'input-class' %>
+  
+    <%= f.label :email, :class => 'label-class mt-4 blue-text' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'input-class' %>
+
+    <%= f.label :password, :class => 'label-class mt-4 blue-text' %>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+    <%= f.password_field :password, :class => 'input-class' %>
+
+
+    <%= f.label :password_confirmation, :class => 'label-class mt-4 blue-text' %>
+    <%= f.password_field :password_confirmation, :class => 'input-class' %>
+
+    <%= f.label :main_image, "Profile Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :main_image %>
+
+    <%= f.label :cover_image, "Cover Picture", :class => 'label-class mt-4 blue-text' %>
+    <%= f.file_field :cover_image %>
+
+  	<div class = 'mt-3 mb-2'>
+    	<%= f.submit "Sign up", :class => 'btn btn-primary w-100' %>
+  	</div>
+	<% end %>
+</div>
+</div>

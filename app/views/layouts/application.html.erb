@@ -4,12 +4,27 @@
     <title>CricketOpinions</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    
+    <% if notice.present? %>
+      <div class="notice mb-0">
+        <p><%= notice %></p>
+      </div>
+    <% end %>
+    <% if alert.present? %>
+      <div class="alert mb-0">
+        <p> <%= alert %> </p>
+      </div>
+    <% end %>
+
+    
     <%= yield %>
+     
   </body>
 </html>

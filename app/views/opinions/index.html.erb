@@ -1,0 +1,42 @@
+<div class="container-fluid ">
+  <div class="row">
+
+    <div class="col-3 p-0 content">
+      <nav class="p-0">
+        <div id="cart" class="carts">
+          <%= render "users/profile" %>
+        </div>
+        <ul class="text-light">
+          <li><a href="/"><i class="fa fa-home text-light" aria-hidden="true"></i><%= link_to 'Home', opinions_path %></a></li>
+          <hr>
+          <li><i class="fa fa-user text-light" aria-hidden="true"></i><%= link_to 'Profile', user_path(current_user)%></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col-9 flex-nowrap p-0 grey-background">
+      <%= render "opinions/navbar" %>
+      <div class="row  ml-0 mr-0">
+        <div class="col-8 m-0 pr-1 pl-0 border-right">
+          <div>
+            <%= render "opinions/tab_nav" %>
+          </div>
+        </div>
+        <div class="col-4 px-3 who-to-follow ">
+          <div class="text-muted pt-2">
+            <h6 class="text-start text-secondary">WHO TO FOLLOW</h6>
+            <hr class = "mt-hr">
+            <div >
+              <div class="col-12 ">
+                <%= render 'opinions/shared/who_to_follow' %>
+              </div>
+            </div>
+          </div>
+          <div id="user" class="users">
+            <%  @user %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
