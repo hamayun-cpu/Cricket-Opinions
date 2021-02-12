@@ -1,0 +1,28 @@
+<%if follower(opinion.user) || opinion.user == current_user %>
+    <div class="list-group-item list-group-item-action my-1 rounded">
+      <div class = 'd-flex'>
+        <%= card_profile_pic_rounded(opinion.user) %>
+        <div class = 'pl-2 w-100'>
+          <div class="d-flex w-100">
+            <h5 class="mb-1 text-capitalize"><%= link_to  opinion.user.username, user_path(opinion.user.id), :class => 'text-decoration-none text-black font-weight-bold'%></h5>
+            <hr>
+            <small class = 'text-secondary'><%= opinion.created_at.strftime('%c') %></small>
+          </div>
+        
+        <p class="my-1 text-secondary"><%= opinion.thought %></p>
+  
+        <%
+=begin%>
+ <% if opinion.user == current_user %>
+          <div class = 'text-right'>
+            <small ><%= link_to "Edit", edit_opinion_path(opinion) %></small>
+            <small><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are you sure?' } %></small>
+          </div>
+        <% end %> 
+<%
+=end%>
+      <%= render "users/shared/link", opinion: opinion %>
+      </div>
+      </div>
+    </div>
+ <% end %>

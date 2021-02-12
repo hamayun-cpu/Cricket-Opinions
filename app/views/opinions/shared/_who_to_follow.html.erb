@@ -1,0 +1,9 @@
+<% if users_which_are_not_followed.any? %>
+  <% users_which_are_not_followed.each do |p| %>
+    <%= profile_pic_rounded(p) %>  
+    <%=link_to p.fullname, user_path(id: p.id), :class => 'text-decoration-none text-black text-capitalize' %>
+    <hr>
+  <% end %>
+<% else %>
+  <h5 class = "mt-5 text-secondary">Looks like there is no one to Follow</h5>
+<% end %>
