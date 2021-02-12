@@ -7,10 +7,7 @@
       <small class = 'text-secondary'><%= opinion.created_at.strftime('%c') %></small>
     </div>
     <p class="mb-1 text-secondary"><%= opinion.thought %></p>
-    <% if opinion.user == current_user %>
-      <small ><%= link_to "Edit", edit_opinion_path(opinion) %></small>
-      <small><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are you sure?' } %></small>
-    <% end %>
+    <%= render 'users/shared/link', opinion: opinion %>
   </div>
  <% end %>
 </div>

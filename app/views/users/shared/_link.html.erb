@@ -1,0 +1,5 @@
+<%- if opinion.user == current_user %>
+  <small ><%= link_to "Edit", edit_opinion_path(opinion) %></small>
+  <small><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are you sure?' } %></small>
+<% end %>
+
